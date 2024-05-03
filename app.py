@@ -280,9 +280,12 @@ if selected_page == "About Me":
     ]
 
     tl = timeline(items, groups=[], options={}, height="400px")
-    st.subheader("Details")
-    st.write("Click on an event on the Progression Chart to view more details.")
-    st.write(tl)
+    try:
+        st.subheader("Details")
+        st.write("Click on an event on the Progression Chart to view more details.")
+        st.write(tl)
+    except:
+        st.write("This service is unavailable")
 
     st.header('Contact Information')
     card_component("Contact me via email",
