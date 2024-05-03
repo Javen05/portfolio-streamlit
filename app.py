@@ -50,29 +50,31 @@ def fetch_info(url):
     return array
     
 def display_events(items):
-    for item in items:
-        st.subheader(item["content"])
-        st.write(f"Start Date: {item['start']} - End Date: {item['end']}")
-        
-        if "events" in item:
-            st.write("Events:")
-            for event in item["events"]:
-                st.write(f"- {event}")
-        
-        if "skills" in item:
-            st.write("Skills:")
-            for skill in item["skills"]:
-                st.write(f"- {skill}")
-        
-        if "achievements" in item:
-            st.write("Achievements:")
-            for achievement in item["achievements"]:
-                st.write(f"- {achievement}")
-        
-        if "tasks" in item:
-            st.write("Tasks:")
-            for task in item["tasks"]:
-                st.write(f"- {task}")
+    sorted_items = sorted(items, key=lambda x: x["start"], reverse=True)
+    
+    for item in sorted_items:
+        with st.expander(item["content"]):
+            st.write(f"Start Date: {item['start']} - End Date: {item['end']}")
+            
+            if "events" in item:
+                st.write("Events:")
+                for event in item["events"]:
+                    st.write(f"- {event}")
+            
+            if "skills" in item:
+                st.write("Skills:")
+                for skill in item["skills"]:
+                    st.write(f"- {skill}")
+            
+            if "achievements" in item:
+                st.write("Achievements:")
+                for achievement in item["achievements"]:
+                    st.write(f"- {achievement}")
+            
+            if "tasks" in item:
+                st.write("Tasks:")
+                for task in item["tasks"]:
+                    st.write(f"- {task}")
 
 ### Sidebar Navigation ###
 st.sidebar.title("Navigation")
@@ -302,9 +304,8 @@ if selected_page == "About Me":
         }
     ]
 
+    st.header('Progression')
     display_events(items)
-    st.subheader("Details")
-    st.write("Click on an event on the Progression Chart to view more details.")
 
     st.header('Contact Information')
     card_component("Contact me via email",
