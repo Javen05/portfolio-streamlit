@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from streamlit_vis_timeline import st_timeline
+from streamlit_timeline import st_timeline
 
 ### Components ###
 def card_component(title, text=None, icon=None, url=None):
