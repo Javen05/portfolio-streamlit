@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from streamlit_timeline import st_timeline
+from streamlit_timeline import timeline
 
 ### Components ###
 def card_component(title, text=None, icon=None, url=None):
@@ -279,10 +279,10 @@ if selected_page == "About Me":
         }
     ]
 
-    timeline = st_timeline(items, groups=[], options={}, height="400px")
+    tl = timeline(items, groups=[], options={}, height="400px")
     st.subheader("Details")
     st.write("Click on an event on the Progression Chart to view more details.")
-    st.write(timeline)
+    st.write(tl)
 
     st.header('Contact Information')
     card_component("Contact me via email",
