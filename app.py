@@ -135,7 +135,6 @@ if selected_page == "About Me":
     plt.axis('off')
     st.pyplot(plt)
 
-    st.header('Progression Chart')
     items = [
         {
             "start": "2024-04-15",
