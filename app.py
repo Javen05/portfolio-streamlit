@@ -279,14 +279,6 @@ if selected_page == "About Me":
         }
     ]
 
-    tl = timeline(items, groups=[], options={}, height="400px")
-    try:
-        st.subheader("Details")
-        st.write("Click on an event on the Progression Chart to view more details.")
-        st.write(tl)
-    except:
-        st.write("This service is unavailable")
-
     st.header('Contact Information')
     card_component("Contact me via email",
                      text="javenlai5@gmail.com",
@@ -299,6 +291,11 @@ if selected_page == "About Me":
     card_component("Check out my Github",
                         url="github.com/Javen05",
                         icon="https://img.icons8.com/?size=256&id=g7P0iny5Rros&format=png")
+
+    tl = timeline(items, groups=[], options={})
+    st.subheader("Details")
+    st.write("Click on an event on the Progression Chart to view more details.")
+    st.write(tl)
 
 elif selected_page == "Documents":
     st.header("Documents")
