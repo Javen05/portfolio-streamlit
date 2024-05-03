@@ -1,7 +1,7 @@
 pip install streamlit==1.24.0
 pip install requests
 pip install bs4
-pip install streamlit-vis-timeline==0.3.0
+pip install streamlit-vis-timeline
 pip install wordcloud==1.9.3
 pip install matplotlib.pyplot
 
