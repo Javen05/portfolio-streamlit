@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from streamlit_timeline import st_timeline as timeline
 
 ### Components ###
 def card_component(title, text=None, icon=None, url=None):
@@ -49,7 +48,31 @@ def fetch_info(url):
     page_info = soup.get_text()
     array = page_info.split('\n')
     return array
-
+    
+def display_events(items):
+    for item in items:
+        st.subheader(item["content"])
+        st.write(f"Start Date: {item['start']} - End Date: {item['end']}")
+        
+        if "events" in item:
+            st.write("Events:")
+            for event in item["events"]:
+                st.write(f"- {event}")
+        
+        if "skills" in item:
+            st.write("Skills:")
+            for skill in item["skills"]:
+                st.write(f"- {skill}")
+        
+        if "achievements" in item:
+            st.write("Achievements:")
+            for achievement in item["achievements"]:
+                st.write(f"- {achievement}")
+        
+        if "tasks" in item:
+            st.write("Tasks:")
+            for task in item["tasks"]:
+                st.write(f"- {task}")
 
 ### Sidebar Navigation ###
 st.sidebar.title("Navigation")
@@ -279,6 +302,10 @@ if selected_page == "About Me":
         }
     ]
 
+    display_events(items)
+    st.subheader("Details")
+    st.write("Click on an event on the Progression Chart to view more details.")
+
     st.header('Contact Information')
     card_component("Contact me via email",
                      text="javenlai5@gmail.com",
@@ -291,11 +318,6 @@ if selected_page == "About Me":
     card_component("Check out my Github",
                         url="github.com/Javen05",
                         icon="https://img.icons8.com/?size=256&id=g7P0iny5Rros&format=png")
-
-    tl = timeline(items, groups=[], options={})
-    st.subheader("Details")
-    st.write("Click on an event on the Progression Chart to view more details.")
-    st.write(tl)
 
 elif selected_page == "Documents":
     st.header("Documents")
