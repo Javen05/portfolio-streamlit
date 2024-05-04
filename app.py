@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 ### Components ###
 def card_component(title, text=None, icon=None, url=None):
@@ -48,6 +49,14 @@ def fetch_info(url):
     page_info = soup.get_text()
     array = page_info.split('\n')
     return array
+
+def fetch_API(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        return response.status_code
     
 def display_events(items):
     sorted_items = sorted(items, key=lambda x: x["start"], reverse=True)
@@ -305,6 +314,28 @@ if selected_page == "About Me":
 
     st.header('Progression')
     display_events(items)
+
+    st.header('LeetCode Profile')
+    leetcode_data = fetch_API("https://leetcode-api-faisalshohag.vercel.app/javenlai")
+    labels = ["Easy", "Medium", "Hard"]
+    sizes = [leetcode_data["easySolved"], leetcode_data["mediumSolved"], leetcode_data["hardSolved"]]
+
+    st.subheader("Statistics")
+    st.info(f"Total Solved: {leetcode_data['totalSolved']}")
+    st.success(f"Contribution Points: {leetcode_data['contributionPoint']}")
+
+    st.subheader("Distribution of Solved Problems")
+    fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, hole=0.4)])
+    fig.update_traces(textposition='inside', 
+                    textinfo='percent+label',
+                    hovertemplate='%{label}<br>Solved: %{value}<extra></extra>')
+    st.plotly_chart(fig)    
+
+    st.subheader("Recent Submissions")
+    for submission in leetcode_data["recentSubmissions"]:
+        with st.expander(submission["title"]):
+            st.write(f"Language: {submission['lang']}")
+            st.write(f"Status: {submission['statusDisplay']}")
 
     st.header('Contact Information')
     card_component("Contact me via email",
