@@ -351,11 +351,11 @@ if selected_page == "About Me":
 
 elif selected_page == "Documents":
     st.header("Documents")
-    resume_url = "https://drive.google.com/file/d/1Oe-QSj_f-azkXOviGjzVmZtPibsxgPkq/view?usp=sharing"
-    card_component("Resume", url=resume_url, text=f'<iframe src="{resume_url}" width="100%" height="auto"></iframe>')
+    resume_url = "https://drive.google.com/file/d/1Oe-QSj_f-azkXOviGjzVmZtPibsxgPkq/preview"
+    card_component("Resume", url=resume_url, text=f'<iframe src="{resume_url}" width="100%" height="800px"></iframe>')
 
-    poly_url = "https://drive.google.com/file/d/1Pi4CJmaFXUtuAmPIp-oxsRdQ30P9xwdA/view?usp=sharing"
-    card_component("Polytechnic Transcript", url=poly_url, text=f'<iframe src="{poly_url}" width="100%" height="auto"></iframe>')
+    poly_url = "https://drive.google.com/file/d/1Pi4CJmaFXUtuAmPIp-oxsRdQ30P9xwdA/preview"
+    card_component("Polytechnic Transcript", url=poly_url, text=f'<iframe src="{poly_url}" width="100%" height="800px"></iframe>')
    
 
 elif selected_page == "Projects":
