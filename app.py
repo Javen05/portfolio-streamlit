@@ -230,7 +230,7 @@ if selected_page == "About Me":
             "start": "2016",
             "end": "2017",
             "content": "Pri 6",
-            "events": [
+            "achievements": [
                 "SYF Certificate of Recognition - Art Exhibition",
                 "EAGLES (Edusave Award for Achievement, Good Leadership and Services)",
                 "Edusave Certificate of Academic Achievement"
@@ -240,7 +240,7 @@ if selected_page == "About Me":
             "start": "2014",
             "end": "2015",
             "content": "Pri 4",
-            "events": [
+            "achievements": [
                 "Edusave Certificate of Academic Achievement (Top 25%)",
                 "Edusave Good Progress Award"
             ]
@@ -249,15 +249,15 @@ if selected_page == "About Me":
             "start": "2012",
             "end": "2013",
             "content": "Pri 2",
-            "events": [
+            "achievements": [
                 "Edusave Certificate of Academic Achievement (Top 25%)",
                 "Edusave Good Progress Award",
                 "Good Progress Award for Chinese Language"
             ]
         },
         {
-            "start": "2023-03-01",
-            "end": "2023-04-01",
+            "start": "2023-03-05",
+            "end": "2023-04-08",
             "content": "Warehouse Assistant @ UPS Supply Chain Solutions",
             "tasks": [
                 "Performed Data Entry using SAP Hana Inventory Management System",
