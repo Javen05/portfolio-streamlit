@@ -14,7 +14,7 @@ def card_component(title, text=None, icon=None, url=None):
                 <h2 style="font-size: 28px;">{title}</h2>
     """
     if icon:
-        card_html += f'<img src="{icon}" width="80" style="margin-left: 2rem;">'
+        card_html += f'<img src="{icon}" width="80">'
     card_html += """</div>"""
 
     if text:
