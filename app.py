@@ -328,7 +328,7 @@ if selected_page == "About Me":
     fig.update_traces(textposition='inside', 
                     textinfo='percent+label',
                     hovertemplate='%{label}<br>Solved: %{value}<extra></extra>')
-    st.plotly_chart(fig)    
+    st.plotly_chart(fig, use_container_width=True)  
 
     st.subheader("Recent Submissions")
     for submission in leetcode_data["recentSubmissions"]:
