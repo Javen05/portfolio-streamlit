@@ -170,7 +170,7 @@ if selected_page == "About Me":
                 "Constructed Data Storyboards using Tableau",
                 "Conducted Data Mining and Business Analytics using SAS Enterprise Miner",
                 "Designed a Data Warehouse and used it for conducting Business Intelligence",
-                "Developed an automated ETL Pipline using Alteryx and AWS",
+                "Developed an automated ETL Pipeline using Alteryx OR AWS",
                 "Data cleaning and transformations using Python"
             ],
             "achievements": [
@@ -194,7 +194,7 @@ if selected_page == "About Me":
                 "App Ideation and Wireframing using Adobe XD",
                 "Built a hardcoded Music App on Android Studio using Java",
                 "Built Dashboards using PowerBi",
-                "Data Preparation using KNIME"
+                "Built Data Preparation Pipelines using KNIME"
             ],
             "achievements": [
                 "Director's List Award (AY2022/2023), 4.0 GPA for Y1",
