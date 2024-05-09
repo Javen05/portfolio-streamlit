@@ -108,7 +108,7 @@ if selected_page == "About Me":
                    text=profile_info[3])
 
     card_component("Technologies & Tools",
-                   text=profile_info[7])
+                   text=profile_info[10])
 
     st.header("Skills")
     skills_freq = {
