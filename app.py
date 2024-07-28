@@ -148,6 +148,14 @@ if selected_page == "About Me":
 
     items = [
         {
+            "start": "2024-07-27",
+            "end": "",
+            "content": "Shake Shack Crew (PT)",
+            "skills": [
+            "Food and Hygiene Lvl 1 Certification"
+            ],
+        },
+        {
             "start": "2024-04-15",
             "end": "2024-10-16",
             "content": "RPA Developer Internship @ Synapxe",
