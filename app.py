@@ -152,7 +152,7 @@ if selected_page == "About Me":
             "end": "",
             "content": "Shake Shack Crew (PT)",
             "skills": [
-            "Food and Hygiene Lvl 1 Certification"
+            "Food Safety Certification (Level 1)"
             ],
         },
         {
