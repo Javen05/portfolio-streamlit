@@ -4,14 +4,27 @@ items = [
         "end": "",
         "content": "Shake Shack Crew (PT)",
         "skills": [
-        "Food Safety Certification (Level 1)"
+            "Food Safety Certification (Level 1)"
         ],
     },
     {
         "start": "2024-04-15",
         "end": "2024-10-16",
-        "content": "RPA Developer Internship @ Synapxe",
-        "skills": [],
+        "content": "Business Analyst cum Developer Internship @ Synapxe",
+        "Key Highlights": [
+            "Enhanced an existing RPA Project used throughout IMH wards by adding new 18 features requested and improving runtime efficiency by 8x",
+            "Delivered a project where I reverse-engineered SAS logic into JavaScript, and developed a Web App that integrates two processes together to fully digitizes an operation for IMH researchers"
+        ],  
+        "Non-Technical Skills": [
+            "Gathering user requirements",
+            "Conducting User Acceptance Testing (UAT)",
+            "Workplace Communication",
+            "Managing expectations"
+        ],
+        "Technical Skills": [
+            "Software Development using Open-Government Products (OGP)",
+            "Built UiPath workflow to automate business processes",
+        ],
     },
     {
         "start": "2023-04-01",
