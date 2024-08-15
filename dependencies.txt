@@ -4,7 +4,7 @@ pip install bs4
 pip install wordcloud==1.9.3
 pip install matplotlib.pyplot
 pip install matplotlib plotly
-
+pip install pandas==2.2.2
 
 
 
