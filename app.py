@@ -74,7 +74,7 @@ def display_events(items):
             for key, value in item.items():
                 if key not in ["start", "end", "content"]:
                     if isinstance(value, list):  # Only lists are displayed as sub-items
-                        st.write(f"{key.capitalize()}:")
+                        st.write(f"**{key.capitalize()}:**")
                         for sub_item in value:
                             st.write(f"- {sub_item}")
 
