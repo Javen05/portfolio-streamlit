@@ -67,7 +67,9 @@ def display_events(items):
     sorted_items = sorted(items, key=lambda x: x.get("start", ""), reverse=True)
     
     for item in sorted_items:
-        with st.expander(item["content"]):
+        expander_title = f"<strong style='font-size:1.2em'>{item['content']}</strong>"
+        
+        with st.expander(st.markdown(expander_title, unsafe_allow_html=True)):
             start = item.get("start", None)
             end = item.get("end", "-")  # Replace empty end with "-"
 
