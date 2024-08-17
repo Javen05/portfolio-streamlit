@@ -65,10 +65,16 @@ def fetch_API(url):
     
 def display_events(items):
     sorted_items = sorted(items, key=lambda x: x["start"], reverse=True)
+    if not item['start']:
+        
     
     for item in sorted_items:
         with st.expander(item["content"]):
-            st.write(f"Duration: {item['start']} to {item['end']}")
+            start = item.get("start", None)
+            end = item.get("end", "-")  # Replace empty end with "-"
+            
+            if start:
+                st.markdown(f"*{start} to {end}*")  # Italicize the duration
             
             # Loop through all the keys in the item, excluding "start", "end", and "content"
             for key, value in item.items():
