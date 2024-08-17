@@ -64,13 +64,14 @@ def fetch_API(url):
         return response.status_code
     
 def display_events(items):
-    sorted_items = sorted(items, key=lambda x: x["start"], reverse=True)
+    sorted_items = sorted(items, key=lambda x: x.get("start", ""), reverse=True)
     
     for item in sorted_items:
         with st.expander(item["content"]):
             start = item.get("start", None)
             end = item.get("end", "-")  # Replace empty end with "-"
             
+            # Only display the duration if 'start' exists
             if start:
                 st.markdown(f"*{start} to {end}*")  # Italicize the duration
             
@@ -78,7 +79,7 @@ def display_events(items):
             for key, value in item.items():
                 if key not in ["start", "end", "content"]:
                     if isinstance(value, list):  # Only lists are displayed as sub-items
-                        st.write(f"**{key.capitalize()}:**")
+                        st.markdown(f"**{key.capitalize()}:**")  # Bold the key title
                         for sub_item in value:
                             st.write(f"- {sub_item}")
 
