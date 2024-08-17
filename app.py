@@ -65,8 +65,6 @@ def fetch_API(url):
     
 def display_events(items):
     sorted_items = sorted(items, key=lambda x: x["start"], reverse=True)
-    if not item['start']:
-        
     
     for item in sorted_items:
         with st.expander(item["content"]):
