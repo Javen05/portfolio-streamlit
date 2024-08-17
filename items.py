@@ -9,7 +9,7 @@ items = [
     },
     {
         "start": "2024-04-15",
-        "end": "2024-10-16",
+        "end": "2024-10-11",
         "content": "Business Analyst cum Developer Internship @ Synapxe",
         "Key Highlights": [
             "Enhanced an existing RPA Project used throughout IMH wards by adding new 18 features requested and improving runtime efficiency by 8x",
