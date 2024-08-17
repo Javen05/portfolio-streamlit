@@ -70,6 +70,9 @@ def display_events(items):
         with st.expander(item["content"]):
             start = item.get("start", None)
             end = item.get("end", "-")  # Replace empty end with "-"
+
+            if end == "":
+                end = "-"
             
             # Only display the duration if 'start' exists
             if start:
