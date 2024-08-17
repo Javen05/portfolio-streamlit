@@ -68,27 +68,15 @@ def display_events(items):
     
     for item in sorted_items:
         with st.expander(item["content"]):
-            st.write(f"Start Date: {item['start']} - End Date: {item['end']}")
+            st.write(f"Duration: {item['start']} to {item['end']}")
             
-            if "events" in item:
-                st.write("Events:")
-                for event in item["events"]:
-                    st.write(f"- {event}")
-            
-            if "skills" in item:
-                st.write("Skills:")
-                for skill in item["skills"]:
-                    st.write(f"- {skill}")
-            
-            if "achievements" in item:
-                st.write("Achievements:")
-                for achievement in item["achievements"]:
-                    st.write(f"- {achievement}")
-            
-            if "tasks" in item:
-                st.write("Tasks:")
-                for task in item["tasks"]:
-                    st.write(f"- {task}")
+            # Loop through all the keys in the item, excluding "start", "end", and "content"
+            for key, value in item.items():
+                if key not in ["start", "end", "content"]:
+                    if isinstance(value, list):  # Only lists are displayed as sub-items
+                        st.write(f"{key.capitalize()}:")
+                        for sub_item in value:
+                            st.write(f"- {sub_item}")
 
 
 ### Function to load data from CSV ###
