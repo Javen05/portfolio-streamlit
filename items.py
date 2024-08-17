@@ -12,7 +12,7 @@ items = [
         "end": "2024-10-11",
         "content": "Business Analyst cum Developer Internship @ Synapxe",
         "Key Highlights": [
-            "Enhanced an existing RPA Project used throughout IMH wards by adding new 18 features requested and improving runtime efficiency by 8x",
+            "Enhanced an existing RPA Project used throughout IMH wards by adding new 18 features requested and improving runtime efficiency of the code by 8x",
             "Delivered a project where I reverse-engineered SAS logic into JavaScript, and developed a Web App that integrates two processes together to fully digitizes an operation for IMH researchers"
         ],  
         "Non-Technical Skills": [
