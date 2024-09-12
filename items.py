@@ -1,7 +1,7 @@
 items = [
     {
         "start": "2024-07-27",
-        "end": "",
+        "end": "2024-08-24",
         "content": "Shake Shack Crew (PT)",
         "skills": [
             "Food Safety Certification (Level 1)"
