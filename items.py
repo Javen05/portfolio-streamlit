@@ -13,7 +13,7 @@ items = [
         "content": "Business Analyst cum Developer Internship @ Synapxe",
         "Key Highlights": [
             "Enhanced an existing RPA Project used throughout IMH wards by adding new 18 features requested and improving runtime efficiency of the code by ~6x (1.5hrs saved per run, saving 433+ hrs annually)",
-            "Delivered a project, valued at $100K+ (price quoted by vendors), where I reverse-engineered SAS logic into JavaScript and developed a Web App that integrates two processes together to fully digitizes an operation for IMH researchers within 2 months",
+            "Delivered a project, valued at ~$20K, where I reverse-engineered SAS logic into JavaScript and developed a Web App that integrates two processes together to fully digitizes an operation for IMH researchers within 2 months",
             "Organized and hosted an volunteering event with over 100 participants"
         ],  
         "Non-Technical Skills": [
