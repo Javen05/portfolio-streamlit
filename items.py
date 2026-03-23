@@ -1,4 +1,12 @@
+# This file is to populate Progression section with ur cool stuff.
 items = [
+    # {
+    # 'start' 
+    # and 'end' accepts any date format for the reader to interpret.
+    # 'content' is header of accordion.
+    # you can add your own key: values, and as many as you want.
+    # nested a list [] in value to add "subpointers" which are seperated with a ','
+    # }
     {
         "start": "2024-07-27",
         "end": "2024-08-24",
